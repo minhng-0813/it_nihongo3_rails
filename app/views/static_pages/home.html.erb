@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+<h1>HOME PAGE</h1>
+<% if user_signed_in? %>
+    <div> こんにちは  <%= current_user.email %></div>
+<% end %>

@@ -26,7 +26,7 @@ class BookReviewsController < ApplicationController
     
     respond_to do |format|
       if @book_review.save
-        format.html { redirect_to @book_review, notice: "Book review was successfully created." }
+        format.html { redirect_to "/books/" + @book_review.book_id.to_s, notice: "Book review was successfully created." }
         format.json { render :show, status: :created, location: @book_review }
       else
         format.html { render :new, status: :unprocessable_entity }
